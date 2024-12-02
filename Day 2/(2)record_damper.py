@@ -41,11 +41,11 @@ def is_report_safe(report):
         curr_val = report[index]
 
         # If ascending, make sure it keeps ascending
-        if (curr_val <= prev_val) and (is_ascending == True):
+        if (curr_val < prev_val) and (is_ascending == True):
             unsafe_jumps += 1
 
         # If descending, make sure it keeps descending
-        if (curr_val >= prev_val) and (is_ascending == False):
+        if (curr_val > prev_val) and (is_ascending == False):
             unsafe_jumps += 1
 
         # Make sure the jump is NOT too high
